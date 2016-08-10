@@ -8,10 +8,11 @@
   },
   "bugs": "https://github.com/reshape/sugarml/issues",
   "devDependencies": {
-    "ava": "0.15.x",
-    "coveralls": "2.x",
-    "nyc": "6.x",
+    "ava": "^0.16.0",
+    "coveralls": "^2.11.12",
+    "nyc": "^7.1.0",
     "reshape": "reshape/reshape",
+    "snazzy": "^4.0.1",
     "standard": "7.x"
   },
   "engines": {
@@ -22,9 +23,9 @@
   "main": "lib",
   "repository": "reshape/sugarml",
   "scripts": {
-    "test": "ava",
-    "lint": "standard",
-    "coverage": "nyc ava",
-    "coveralls": "nyc --reporter=lcov ava && cat ./coverage/lcov.info | coveralls"
+    "test": "npm run lint && nyc ava",
+    "lint": "standard | snazzy",
+    "coverage": "npm test && nyc report --reporter=html && open ./coverage/index.html",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   }
 }

@@ -3,3 +3,5 @@ test
 contributing.md
 .editorconfig
 .travis.yml
+coverage
+.nyc_output
