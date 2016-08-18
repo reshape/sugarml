@@ -34,9 +34,7 @@ test('comment', (t) => {
 })
 
 test('invalid token', (t) => {
-  return error('html', (err) => {
-    t.truthy(err === 'Error: Cannot parse character "<" at 1:1')
-  })
+  t.throws(error('html'), 'Cannot parse character "<"\nLocation: [no filename]:1:1')
 })
 
 function compare (t, name, log) {
@@ -57,12 +55,7 @@ function compare (t, name, log) {
     })
 }
 
-function error (name, cb) {
+function error (name) {
   const html = fs.readFileSync(path.join(fixtures, `${name}.html`), 'utf8')
-
-  try {
-    return reshape({ parser }).process(html)
-  } catch (err) {
-    cb(err.toString())
-  }
+  return reshape({ parser }).process(html)
 }
