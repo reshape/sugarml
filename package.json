@@ -27,5 +27,8 @@
     "lint": "standard | snazzy",
     "coverage": "npm test && nyc report --reporter=html && open ./coverage/index.html",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "dependencies": {
+    "code-frame": "^2.0.0"
   }
 }
