@@ -34,7 +34,7 @@ test('comment', (t) => {
 })
 
 test('invalid token', (t) => {
-  t.throws(error('html'), 'Cannot parse character "<"\nLocation: [no filename]:1:1')
+  t.throws(error('html'), /Cannot parse character "<"/)
 })
 
 function compare (t, name, log) {
