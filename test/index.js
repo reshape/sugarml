@@ -37,11 +37,15 @@ test('invalid token', (t) => {
   t.throws(error('html'), /Cannot parse character "<"/)
 })
 
+test('quoted attrs containing quotes', (t) => {
+  return compare(t, 'attr-quotes')
+})
+
 function compare (t, name, log) {
   let html, expected
 
   try {
-    html = fs.readFileSync(path.join(fixtures, `${name}.html`), 'utf8')
+    html = fs.readFileSync(path.join(fixtures, `${name}.sml`), 'utf8')
     expected = fs.readFileSync(path.join(fixtures, `expected/${name}.html`), 'utf8')
   } catch (err) {
     console.error(err)
@@ -56,6 +60,6 @@ function compare (t, name, log) {
 }
 
 function error (name) {
-  const html = fs.readFileSync(path.join(fixtures, `${name}.html`), 'utf8')
+  const html = fs.readFileSync(path.join(fixtures, `${name}.sml`), 'utf8')
   return reshape({ parser }).process(html)
 }

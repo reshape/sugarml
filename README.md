@@ -115,12 +115,14 @@ input(checked) >>> <input checked>
 input(type='checkbox' checked) >>> <input type="checkbox" checked>
 ```
 
-You can quote your attribute values or not, your choice (although we would recommend quoting). However, if the value contains a space, it must be quoted. For example:
+You can quote your attribute values or not, your choice (although we would recommend quoting). If you quote your attribute, it can contain any value other than an end-quote that matches the type of your starting quote (obviously). If you do not quote your attribute, it can contain any character other than a single or double quote, a close paren, or a space. As such, you are less likely to run into issues when quoting your attribute, which is why we recommend it. For example:
 
 ```html
 div(class=foo) >>> <div class="foo"></div>
 div(class='foo bar') >>> <div class="foo bar"></div>
 div(class=foo bar) >>> <div class="foo" bar></div>
+div(class="foo('wow')") >>> <div class="foo('wow')"></div>
+div(class=foo("wow")) >>> Syntax error
 ```
 
 Attributes can contain any character other than `=` or a space. If you value is quoted, it can contain any value other than a quote (that will end the attribute), and if it's not quoted, it can contain any value other than a quote or space. So even attributes with special characters (found sometimes in certain front-end frameworks like vue and angular) work fine. For example:
