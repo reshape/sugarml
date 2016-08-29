@@ -33,12 +33,16 @@ test('comment', (t) => {
   return compare(t, 'comments')
 })
 
-test('invalid token', (t) => {
-  t.throws(error('html'), /Cannot parse character "<"/)
-})
-
 test('quoted attrs containing quotes', (t) => {
   return compare(t, 'attr-quotes')
+})
+
+test('nesting with empty lines in between', (t) => {
+  return compare(t, 'nesting-newline')
+})
+
+test('invalid token', (t) => {
+  t.throws(error('html'), /Cannot parse character "<"/)
 })
 
 function compare (t, name, log) {
