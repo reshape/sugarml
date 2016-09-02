@@ -17,6 +17,10 @@ test('pipe', (t) => {
   return compare(t, 'pipe')
 })
 
+test('pipe with text only', (t) => {
+  return compare(t, 'pipe2')
+})
+
 test('id', (t) => {
   return compare(t, 'id')
 })

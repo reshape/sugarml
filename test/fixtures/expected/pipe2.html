@@ -1,0 +1,13 @@
+<p>const reshape = require('reshape')
+const standard = require('reshape-standard')
+
+const html = `doctype html
+head
+  title testing!
+body
+  p hello {{ name }}!
+`
+
+return await reshape(standard())
+  .process(html)
+  .then((res) => res.output({ name: 'world' }))</p>
