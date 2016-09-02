@@ -10,10 +10,10 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "coveralls": "^2.11.12",
-    "nyc": "^7.1.0",
+    "nyc": "^8.1.0",
     "reshape": "^0.3.1",
     "snazzy": "^4.0.1",
-    "standard": "7.x"
+    "standard": "8.0.0"
   },
   "engines": {
     "node": ">= 6.0.0"
