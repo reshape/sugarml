@@ -29,6 +29,6 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
-    "code-frame": "^2.0.0"
+    "code-frame": "^3.0.0"
   }
 }
