@@ -45,6 +45,10 @@ test('nesting with empty lines in between', (t) => {
   return compare(t, 'nesting-newline')
 })
 
+test('block content', (t) => {
+  return compare(t, 'block-content')
+})
+
 test('invalid token', (t) => {
   t.throws(error('html'), /Cannot parse character "<"/)
 })
