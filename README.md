@@ -41,6 +41,14 @@ reshape({ parser: sugarml })
 
 This parser is very loose with its rules and standards. It is not responsible for enforcing good style or conventions, it's simply responsible for compiling your code. This means that you can use all sorts of invalid characters in attribute and tag names, and indentation rules are extremely loose.
 
+## Syntax Highlighting
+
+If you're looking for beautiful syntax highlighting, look no further. Available plugins listed below:
+
+- [Atom](https://github.com/reshape/atom-sugarml)
+
+If you made a plugin for another editor, please send in a pull request to have it featured here!
+
 #### Indentation & Nesting
 
 This parser determines how tags are nested based on indentation. For example:
