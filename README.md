@@ -169,6 +169,29 @@ This would render as:
 
 For any type of content transforms that are more complex than this, we recommend checking out [reshape-content](https://github.com/reshape/content).
 
+#### Text Block Content
+
+If you have a block of text you don't really want to put pipes before, you can use a text block for this. Put a `.` after the end of the tag name, then indent the content in to the next line as such:
+
+```
+p.
+  Here's some content
+  Split into multiple lines, wow!
+    span will render as text not a span
+  ok that's the end!
+```
+
+This would render as:
+
+```html
+<p>Here's some content
+Split into multiple lines, wow!
+  span will render as text not a span
+ok that's the end!</p>
+```
+
+Note that you will not be able to render any elements within a text block. The block continues until there's a line that is not indented at a greater level than the parent element.
+
 #### Doctypes
 
 The doctype is a special tag, and is handled specially. If the first word on the first line of your template is `doctype`, it will be parsed as a doctype. Anything after this word will be added to the tag. So for example:
