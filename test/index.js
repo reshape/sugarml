@@ -49,6 +49,10 @@ test('block content', (t) => {
   return compare(t, 'block-content')
 })
 
+test('no newline at eof', (t) => {
+  return compare(t, 'no-eof-newline')
+})
+
 test('invalid token', (t) => {
   t.throws(error('html'), /Cannot parse character "<"/)
 })
