@@ -1,7 +1,11 @@
 p.
   hello .this is block content.
   wow such. block
+
+
   span no html render wow
+
+  ok thats all
 
 #someid.wow.
       testing
@@ -19,5 +23,9 @@ script.
   class Wow {
     constructor () {
       super()
+    }
+
+    someMethod () {
+      return true
     }
   }

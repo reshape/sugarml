@@ -49,6 +49,8 @@ If you're looking for beautiful syntax highlighting, look no further. Available 
 
 If you made a plugin for another editor, please send in a pull request to have it featured here!
 
+## Features
+
 #### Indentation & Nesting
 
 This parser determines how tags are nested based on indentation. For example:
