@@ -19,13 +19,16 @@ section
   p.
     wow
 
-script.
-  class Wow {
-    constructor () {
-      super()
+section
+  script.
+    class Wow {
+      constructor () {
+        super()
+      }
+
+      someMethod () {
+        return true
+      }
     }
 
-    someMethod () {
-      return true
-    }
-  }
+  .otherdiv p
