@@ -20,7 +20,7 @@ section
     wow
 
 section
-  script.
+  script(type='text/javascript').
     class Wow {
       constructor () {
         super()
