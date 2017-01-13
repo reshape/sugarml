@@ -1,7 +1,9 @@
 src
 test
+benchmark
 contributing.md
 .editorconfig
 .travis.yml
 coverage
 .nyc_output
+yarn.lock
