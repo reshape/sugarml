@@ -1,0 +1,6 @@
+script.
+  class Foo {
+    constructor () {
+      this.bar = 'wow'
+    }
+  }

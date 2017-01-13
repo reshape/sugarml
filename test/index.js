@@ -49,6 +49,10 @@ test('block content', (t) => {
   return compare(t, 'block-content')
 })
 
+test('inline tags', (t) => {
+  return compare(t, 'inline')
+})
+
 test('no newline at eof', (t) => {
   return compare(t, 'no-eof-newline')
 })
