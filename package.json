@@ -10,8 +10,10 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "coveralls": "^2.11.12",
+    "matcha": "^0.7.0",
     "nyc": "^10.0.0",
-    "reshape": "^0.3.1",
+    "pug": "^2.0.0-beta6",
+    "reshape": "^0.4.0",
     "snazzy": "^6.0.0",
     "standard": "8.6.0"
   },
@@ -26,7 +28,8 @@
     "test": "npm run lint && nyc ava",
     "lint": "standard | snazzy",
     "coverage": "npm test && nyc report --reporter=html && open ./coverage/index.html",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "bench": "matcha"
   },
   "dependencies": {
     "code-frame": "^5.0.0"

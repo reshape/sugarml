@@ -4,6 +4,7 @@ const reshape = require('reshape')
 const sugarml = require('../')
 const fs = require('fs')
 const path = require('path')
+const pug = require('pug')
 const fixtures = path.join(__dirname, 'fixtures')
 
 suite('Basic benchmarks', () => {
@@ -22,6 +23,11 @@ suite('Basic benchmarks', () => {
     reshape({ parser: sugarml })
       .process(basic)
       .then((result) => { result.output(); next() })
+  })
+
+  bench('pug', (next) => {
+    pug.compile(basic)()
+    next()
   })
 
   bench('attributes', (next) => {
