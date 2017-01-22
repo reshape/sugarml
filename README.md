@@ -1,5 +1,7 @@
 # SugarML
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/reshape/sugarml.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/sugarml.svg?style=flat-square)](https://npmjs.com/package/sugarml)
 [![tests](https://img.shields.io/travis/reshape/sugarml.svg?style=flat-square)](https://travis-ci.org/reshape/sugarml?branch=master)
 [![dependencies](https://img.shields.io/david/reshape/sugarml.svg?style=flat-square)](https://david-dm.org/reshape/sugarml)
