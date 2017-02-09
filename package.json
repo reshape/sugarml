@@ -15,7 +15,7 @@
     "pug": "^2.0.0-beta6",
     "reshape": "^0.4.0",
     "snazzy": "^6.0.0",
-    "standard": "8.6.0"
+    "standard": "9.0.0-beta.0"
   },
   "engines": {
     "node": ">= 6.0.0"
