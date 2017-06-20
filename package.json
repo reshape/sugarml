@@ -8,14 +8,14 @@
   },
   "bugs": "https://github.com/reshape/sugarml/issues",
   "devDependencies": {
-    "ava": "^0.17.0",
-    "coveralls": "^2.11.12",
+    "ava": "^0.19.1",
+    "coveralls": "^2.13.1",
     "matcha": "^0.7.0",
-    "nyc": "^10.0.0",
-    "pug": "^2.0.0-beta6",
-    "reshape": "^0.4.0",
-    "snazzy": "^6.0.0",
-    "standard": "9.0.2"
+    "nyc": "^11.0.2",
+    "pug": "^2.0.0-rc.2",
+    "reshape": "^0.4.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
   },
   "engines": {
     "node": ">= 6.0.0"
