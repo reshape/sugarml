@@ -58,14 +58,15 @@ test('no newline at eof', (t) => {
 })
 
 test('invalid token', (t) => {
-  t.throws(error('html'), /Cannot parse character "<"/)
+  return error('html', t)
+    .catch((err) => { t.regex(err.toString(), /Cannot parse character "<"/) })
 })
 
 function compare (t, name, log) {
   let html, expected
 
   try {
-    html = fs.readFileSync(path.join(fixtures, `${name}.sml`), 'utf8')
+    html = fs.readFileSync(path.join(fixtures, `${name}.sgr`), 'utf8')
     expected = fs.readFileSync(path.join(fixtures, `expected/${name}.html`), 'utf8')
   } catch (err) {
     console.error(err)
@@ -79,7 +80,7 @@ function compare (t, name, log) {
     })
 }
 
-function error (name) {
-  const html = fs.readFileSync(path.join(fixtures, `${name}.sml`), 'utf8')
+function error (name, t) {
+  const html = fs.readFileSync(path.join(fixtures, `${name}.sgr`), 'utf8')
   return reshape({ parser }).process(html)
 }
