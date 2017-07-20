@@ -35,7 +35,7 @@ const reshape = require('reshape')
 const sugarml = require('sugarml')
 
 reshape({ parser: sugarml })
-  .process(readFileSync('./index.sml', 'utf8'))
+  .process(readFileSync('./index.sgr', 'utf8'))
   .then((result) => console.log(result.output()))
 ```
 
@@ -242,7 +242,7 @@ const reshape = require('reshape')
 const sugarml = require('sugarml')
 
 reshape({ parser: sugarml })
-  .process(readFileSync('./index.sml', 'utf8'))
+  .process(readFileSync('./index.sgr', 'utf8'))
   .then((result) => console.log(result.output()))
 ```
 
