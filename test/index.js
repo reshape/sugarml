@@ -57,9 +57,27 @@ test('no newline at eof', (t) => {
   return compare(t, 'no-eof-newline')
 })
 
-test('invalid token', (t) => {
+test('slash in attributes doesn\'t bug', (t) => {
+  return compare(t, 'slash')
+})
+
+test('empty attributes doesn\'t bug', (t) => {
+  return compare(t, 'empty-attrs')
+})
+
+test('invalid token error', (t) => {
   return error('html', t)
     .catch((err) => { t.regex(err.toString(), /Cannot parse character "<"/) })
+})
+
+test('unclosed attribute parens error', (t) => {
+  return error('unclosed-attribute-paren', t)
+    .catch((err) => { t.regex(err.toString(), /Unclosed attribute parentheses/) })
+})
+
+test('unclosed attribute quote error', (t) => {
+  return error('unclosed-attribute-quote', t)
+    .catch((err) => { t.regex(err.toString(), /Unclosed attribute quote/) })
 })
 
 function compare (t, name, log) {
