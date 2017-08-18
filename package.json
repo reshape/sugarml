@@ -12,10 +12,9 @@
     "coveralls": "^2.13.1",
     "matcha": "^0.7.0",
     "nyc": "^11.1.0",
+    "prettier": "^1.5.3",
     "pug": "^2.0.0-rc.3",
-    "reshape": "^0.4.1",
-    "snazzy": "^7.0.0",
-    "standard": "^10.0.3"
+    "reshape": "^0.4.1"
   },
   "engines": {
     "node": ">= 6.0.0"
@@ -26,7 +25,7 @@
   "repository": "reshape/sugarml",
   "scripts": {
     "test": "npm run lint && nyc ava",
-    "lint": "standard | snazzy",
+    "lint": "prettier --no-semi --single-quote --write '**/*.js'",
     "coverage": "npm test && nyc report --reporter=html && open ./coverage/index.html",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "bench": "matcha"

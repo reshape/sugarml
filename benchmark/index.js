@@ -11,35 +11,42 @@ suite('Basic benchmarks', () => {
   const html = fs.readFileSync(path.join(fixtures, 'basic.html'), 'utf8')
   const basic = fs.readFileSync(path.join(fixtures, 'basic.sgr'), 'utf8')
   const attrs = fs.readFileSync(path.join(fixtures, 'attributes.sgr'), 'utf8')
-  const cblock = fs.readFileSync(path.join(fixtures, 'content_block.sgr'), 'utf8')
+  const cblock = fs.readFileSync(
+    path.join(fixtures, 'content_block.sgr'),
+    'utf8'
+  )
 
-  bench('without sugarml', (next) => {
-    reshape()
-      .process(html)
-      .then((result) => { result.output(); next() })
+  bench('without sugarml', next => {
+    reshape().process(html).then(result => {
+      result.output()
+      next()
+    })
   })
 
-  bench('bare bones', (next) => {
-    reshape({ parser: sugarml })
-      .process(basic)
-      .then((result) => { result.output(); next() })
+  bench('bare bones', next => {
+    reshape({ parser: sugarml }).process(basic).then(result => {
+      result.output()
+      next()
+    })
   })
 
-  bench('pug', (next) => {
+  bench('pug', next => {
     pug.compile(basic)()
     next()
   })
 
-  bench('attributes', (next) => {
-    reshape({ parser: sugarml })
-      .process(attrs)
-      .then((result) => { result.output(); next() })
+  bench('attributes', next => {
+    reshape({ parser: sugarml }).process(attrs).then(result => {
+      result.output()
+      next()
+    })
   })
 
-  bench('content block', (next) => {
-    reshape({ parser: sugarml })
-      .process(cblock)
-      .then((result) => { result.output(); next() })
+  bench('content block', next => {
+    reshape({ parser: sugarml }).process(cblock).then(result => {
+      result.output()
+      next()
+    })
   })
 
   // bench('char loop parse', () => {
