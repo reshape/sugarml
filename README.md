@@ -138,7 +138,7 @@ div(class=foo("wow")) >>> Syntax error
 Attributes can contain any character other than `=` or a space. If you value is quoted, it can contain any value other than a quote (that will end the attribute), and if it's not quoted, it can contain any value other than a quote or space. So even attributes with special characters (found sometimes in certain front-end frameworks like vue and angular) work fine. For example:
 
 ```html
-div(:bind='focus') >>> <div :bind="click"></div>
+div(:bind='focus') >>> <div :bind="focus"></div>
 div(*ngFor='foo in bar') >>> <div *ngFor="foo in bar"></div>
 div(@click='doSomething') >>> <div @click="doSomething"></div>
 ```
