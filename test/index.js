@@ -57,6 +57,10 @@ test('inline tags', t => {
   return compare(t, 'inline')
 })
 
+test('inline context leak', t => {
+  return compare(t, 'inline-context')
+})
+
 test('no newline at eof', t => {
   return compare(t, 'no-eof-newline')
 })
@@ -100,10 +104,12 @@ function compare(t, name, log) {
     console.error(err)
   }
 
-  return reshape({ parser }).process(html).then(res => {
-    if (log) console.log(res.output())
-    t.is(res.output(), expected.trim())
-  })
+  return reshape({ parser })
+    .process(html)
+    .then(res => {
+      if (log) console.log(res.output())
+      t.is(res.output(), expected.trim())
+    })
 }
 
 function error(name, t) {
