@@ -95,6 +95,10 @@ test('unclosed attribute quote error', t => {
   })
 })
 
+test('tag text and nested tag error', t => {
+  return compare(t, 'nested-tag-text')
+})
+
 function compare(t, name, log) {
   let html, expected
 
