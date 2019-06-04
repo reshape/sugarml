@@ -73,6 +73,10 @@ test("empty attributes doesn't bug", t => {
   return compare(t, 'empty-attrs')
 })
 
+test.only('html entities encoded correctly', t => {
+  return compare(t, 'entities', true)
+})
+
 test('invalid token error', t => {
   return error('html', t).catch(err => {
     t.regex(err.toString(), /Cannot parse character "<"/)

@@ -17,17 +17,21 @@ suite('Basic benchmarks', () => {
   )
 
   bench('without sugarml', next => {
-    reshape().process(html).then(result => {
-      result.output()
-      next()
-    })
+    reshape()
+      .process(html)
+      .then(result => {
+        result.output()
+        next()
+      })
   })
 
   bench('bare bones', next => {
-    reshape({ parser: sugarml }).process(basic).then(result => {
-      result.output()
-      next()
-    })
+    reshape({ parser: sugarml })
+      .process(basic)
+      .then(result => {
+        result.output()
+        next()
+      })
   })
 
   bench('pug', next => {
@@ -36,17 +40,21 @@ suite('Basic benchmarks', () => {
   })
 
   bench('attributes', next => {
-    reshape({ parser: sugarml }).process(attrs).then(result => {
-      result.output()
-      next()
-    })
+    reshape({ parser: sugarml })
+      .process(attrs)
+      .then(result => {
+        result.output()
+        next()
+      })
   })
 
   bench('content block', next => {
-    reshape({ parser: sugarml }).process(cblock).then(result => {
-      result.output()
-      next()
-    })
+    reshape({ parser: sugarml })
+      .process(cblock)
+      .then(result => {
+        result.output()
+        next()
+      })
   })
 
   // bench('char loop parse', () => {
