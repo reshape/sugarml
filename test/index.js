@@ -99,6 +99,12 @@ test('tag text and nested tag error', t => {
   return compare(t, 'nested-tag-text')
 })
 
+test('invalid nested tag after inline tag error', t => {
+  return error('inline-tag-text', t).catch(err => {
+    t.regex(err.toString(), /Indent level different from previous line : forbidden after nested tag/)
+  })
+})
+
 function compare(t, name, log) {
   let html, expected
 
