@@ -96,6 +96,7 @@ test('unclosed attribute quote error', t => {
 })
 
 test('tag text and nested tag error', t => {
+test('tag text and nested tag', t => {
   return compare(t, 'nested-tag-text')
 })
 

@@ -1,2 +1,4 @@
 li: a(href='wow') content
 li: .foo hello
+li: a.foo hello
+.foo: p.bar
