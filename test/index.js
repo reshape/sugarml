@@ -99,6 +99,10 @@ test('indent at begining', t => {
   return compare(t, 'indent-start')
 })
 
+test('sugarml own comments', t => {
+  return compare(t, 'sugarml-comments')
+})
+
 function compare(t, name, log) {
   let html, expected
 
