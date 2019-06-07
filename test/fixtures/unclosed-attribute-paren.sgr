@@ -1,1 +1,5 @@
-a(b
+ul
+  li(
+  img(src=foo
+  li: img(src='bar'
+  li(src='')
