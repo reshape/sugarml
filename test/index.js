@@ -95,6 +95,10 @@ test('unclosed attribute quote error', t => {
   })
 })
 
+test('indent at begining', t => {
+  return compare(t, 'indent-start')
+})
+
 function compare(t, name, log) {
   let html, expected
 
