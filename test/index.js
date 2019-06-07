@@ -73,7 +73,7 @@ test("empty attributes doesn't bug", t => {
   return compare(t, 'empty-attrs')
 })
 
-test.only('html entities encoded correctly', t => {
+test.skip('html entities encoded correctly', t => {
   return compare(t, 'entities', true)
 })
 
