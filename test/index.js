@@ -105,7 +105,10 @@ test('sugarml own comments', t => {
 
 test('invalid nested tag after inline text error', t => {
   return error('inline-text-nested-tag', t).catch(err => {
-    t.regex(err.toString(), /Inline text and nested tags cannot both be used at the same time. To resolve this error format your template as :\n\n  1 | li \n  2 |   | foo\n  3 |   span bar/)
+    t.regex(
+      err.toString(),
+      /Inline text and nested tags cannot both be used at the same time. To resolve this error format your template as :\n\n  1 | li \n  2 |   | foo\n  3 |   span bar/
+    )
   })
 })
 
